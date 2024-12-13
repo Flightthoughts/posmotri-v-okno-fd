@@ -260,7 +260,7 @@ fieldset {
 
 .button {
   display: block;
-  max-height: 34px;
+  min-height: 34px;
   justify-items: center;
   border: 1px solid  #ffffff;
   font-family: 'Fira Sans Condensed';
@@ -286,7 +286,7 @@ fieldset {
 }
 
 .search-form__submit-button {
-  height: 100%;
+  height: 34px;
   width: 100%;
 }
 
