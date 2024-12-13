@@ -55,46 +55,47 @@ fieldset {
 
 .content {
   display: grid;
-  justify-content: center;
-  align-content: center;
-  justify-items: stretch;
-  align-items: end;
-  grid-template-columns: 711px auto;
   grid-template-areas: 
-  "result-video details-title"
-  "result-form details-list";
+  "result details";
+  align-content: center;
   column-gap: 30px;
-  width: 100%;
 }
 
 .result {
   width: 100%;
   height: 100%;
+  grid-area: result;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .content__details {
   width: 100%;
   height: 100%;
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
 .result__video-container {
-  grid-area: result-video;
   position: relative;
-  margin-top: 78px;
-  min-height: 386px;
-  object-fit: cover;
+  min-width: 711px;
+  max-height: 386px;
+  height: 100%;
+  margin-bottom: 16px;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .search-form {
-  grid-area: result-form;
   display: flex;
   gap: 40px;
-  margin-top: 16px;
   align-items: end;
 }
 
@@ -147,11 +148,18 @@ fieldset {
   justify-items: center;
 }
 
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .search-form__fieldset-title {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
+  word-spacing: -7px;
 }
 
 .search-form__textfield {
@@ -162,7 +170,6 @@ fieldset {
   width: 225px;
   opacity: 0.7;
   background-color: transparent;
-  appearance: none;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -170,7 +177,6 @@ fieldset {
 }
 
 .title {
-  grid-area: details-title;
   font-size: 75px;
   font-family: Oswald;
   line-height: 0.94;
@@ -182,9 +188,7 @@ fieldset {
 }
 
 .content__list {
-  grid-area: details-list;
   position: relative;
-  margin-top: 26px;
   max-height: 298px;
   overflow-y: scroll;
   display: flex;
@@ -244,6 +248,7 @@ fieldset {
   line-height: 0.9;
   color: #fff;
   text-decoration: none;
+  word-spacing: -7px;
 }
 
 .content__video-card-thumbnail {
@@ -255,7 +260,7 @@ fieldset {
 
 .button {
   display: block;
-  min-height: 34px;
+  max-height: 34px;
   justify-items: center;
   border: 1px solid  #ffffff;
   font-family: 'Fira Sans Condensed';
