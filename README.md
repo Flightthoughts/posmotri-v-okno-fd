@@ -1,1 +1,1 @@
-https://github.com/Flightthoughts/posmotri_v_okno
+https://github.com/Flightthoughts/posmotri-v-okno-fd.git
