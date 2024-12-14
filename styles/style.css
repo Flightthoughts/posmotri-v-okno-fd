@@ -74,7 +74,6 @@ fieldset {
   position: relative;
   min-width: 711px;
   max-height: 386px;
-  height: 100%;
   margin-bottom: 16px;
 }
 
@@ -94,10 +93,11 @@ fieldset {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  margin-top: 2px;
 }
 
 .search-form__label {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
@@ -159,11 +159,11 @@ fieldset {
   line-height: inherit;
   font-weight: inherit;
   width: 225px;
-  opacity: 0.7;
+  color: rgb(255, 255, 255, 0.7);
   background-color: transparent;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   appearance: none;
 }
 
@@ -178,9 +178,10 @@ fieldset {
 
 .title {
   font-size: 75px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   line-height: 0.94;
   text-transform: uppercase;
+  word-spacing: -28px;
 }
 
 .content__accent {
@@ -190,7 +191,7 @@ fieldset {
 .content__list {
   position: relative;
   max-height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -234,10 +235,14 @@ fieldset {
 }
 
 .content__video-card-title {
+  max-width: 196px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
 }
@@ -259,16 +264,16 @@ fieldset {
 }
 
 .button {
-  display: block;
+  display: flex;
+  justify-content: center;
   min-height: 34px;
-  justify-items: center;
-  border: 1px solid  #ffffff;
-  font-family: 'Fira Sans Condensed';
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.2;
-  align-items: center;
   color: #fff;
+  border: 1px solid currentColor;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.27;
+  align-items: center;
   background-color: transparent;
 }
 
