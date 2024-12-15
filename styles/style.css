@@ -55,9 +55,9 @@ fieldset {
 
 .content {
   display: grid;
+  align-content: center;
   grid-template-areas: 
   "result details";
-  align-content: center;
   column-gap: 30px;
 }
 
@@ -68,13 +68,13 @@ fieldset {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  gap: 16px;
 }
 
 .result__video-container {
   position: relative;
   min-width: 711px;
   max-height: 386px;
-  margin-bottom: 16px;
 }
 
 .result__video {
@@ -86,7 +86,7 @@ fieldset {
 .search-form {
   display: flex;
   gap: 40px;
-  align-items: end;
+  align-items: flex-start;
 }
 
 .search-form__checkbox-list {
@@ -97,8 +97,6 @@ fieldset {
 }
 
 .search-form__label {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
   display: flex;
@@ -142,7 +140,7 @@ fieldset {
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .search-form__fieldset-title {
@@ -150,7 +148,7 @@ fieldset {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
-  word-spacing: -7px;
+  word-spacing: -9px;
 }
 
 .search-form__textfield {
@@ -158,6 +156,7 @@ fieldset {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
+  word-spacing: -13px;
   width: 225px;
   color: rgb(255, 255, 255, 0.7);
   background-color: transparent;
@@ -168,12 +167,13 @@ fieldset {
 }
 
 .content__details {
-  width: 100%;
+  max-width: 399px;
   height: 100%;
   grid-area: details;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  justify-content: end;
+  gap: 18px;
 }
 
 .title {
@@ -181,7 +181,7 @@ fieldset {
   font-family: Oswald, sans-serif;
   line-height: 0.94;
   text-transform: uppercase;
-  word-spacing: -28px;
+  word-spacing: -27px;
 }
 
 .content__accent {
@@ -194,7 +194,7 @@ fieldset {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 29px;
 }
 
 .content__list-item {
@@ -227,7 +227,6 @@ fieldset {
 .content__video-card {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .content__video-card-description-container {
@@ -241,13 +240,16 @@ fieldset {
   overflow: hidden;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 700;
   font-family: Oswald, sans-serif;
-  font-size: 30px;
   font-weight: 700;
+  font-size: 30px;
 }
 
 .content__video-card-description  {
+  max-width: 196px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
   font-weight: 400;
   font-size: 18px;
   line-height: 0.9;
@@ -293,6 +295,7 @@ fieldset {
 .search-form__submit-button {
   height: 34px;
   width: 100%;
+  margin-top: 17px;
 }
 
 .more-button {
